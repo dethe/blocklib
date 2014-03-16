@@ -12,3 +12,13 @@ The custom elements themselves tend towards the experimental and silly. In addit
 * `xtag.remove(elem)` will remove an element from its parent. It is just shorter than the standard DOM call. Returns the element just removed.
 * `xtag.closest(elem, selector)` will return the nearest ancestor element of elem that matches the selector.
 
+
+### `channel.js`
+
+* `channel.on(channelName, elem)` registers element to receive updates on channelName.
+* `channel.off(channelName, elem)` unregisters element to receive updates on channelName.
+* `channel.once(channelName, elem)` registers element to recieve a one-time update on channelName.
+* `channel.emit(channelName, data)` sends an arbitrary data object to every element listening on channelName. Each listener that has an `onChannel(channelName, data)` method will have it called with those arguments.
+* `channel.emitAsync(channelName, data)` sends an arbitrary data object to every element listening on channelName, but doesn't wait until they process it. Each listener's `onChannel` method will be called as above.
+
+
