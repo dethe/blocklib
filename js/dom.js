@@ -70,6 +70,10 @@
         return elem;
     }
 
+    function randomId(){
+        return 'id' + Math.floor(Math.random() * 1000000);
+    }
+
    function closest(elem, selector){
         while(elem){
             if (xtag.matchesSelector(elem, selector)){
@@ -112,4 +116,5 @@
     xtag.svg = svg;
     xtag.remove = remove;
     xtag.closest = closest;
+    xtag.randomId = randomId;
 })(xtag);

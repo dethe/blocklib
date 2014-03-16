@@ -11,6 +11,7 @@ The custom elements themselves tend towards the experimental and silly. In addit
 * `xtag.svg(tagName, [attributes], [children])` is just like the html() function above, but creates elements in the SVG namespace.
 * `xtag.remove(elem)` will remove an element from its parent. It is just shorter than the standard DOM call. Returns the element just removed.
 * `xtag.closest(elem, selector)` will return the nearest ancestor element of elem that matches the selector.
+* `xtag.randomId()` returns a suitably random id, useful for use inside widgets.
 
 
 ### `channel.js`
