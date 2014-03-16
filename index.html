@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/brick.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<title>Block Library Test</title>
+</head>
+<body>
+	<x-appbar id="bar">
+		<header>Block Library Test</header>
+		<button id="view-prev">Previous View</button>
+		<button id="view-next">Next View</button>
+	</x-appbar>
+	<x-deck id="views" selected-index="0">
+		<x-card>
+			<h1>View 1</h1>
+			<p>Hello World</p>
+			<p>
+				<wb-eye></wb-eye>
+				<wb-eye></wb-eye>
+			</p>
+		</x-card>
+		<x-card>
+			<h1>Pick a date</h1>
+			<p>&lt;x-calendar&gt; are a polyfill for &lt;input type="date"&gt;</p>
+			<x-calendar></x-calendar>
+			<p>Just here to show another tag in action</p>
+		</x-card>
+		<x-card>
+			<h1>A random cat to spice things up</h1>
+			<img src="http://lorempixel.com/300/300/cats/">
+		</x-card>
+	</x-deck>
+	<script src="js/brick.min.js"></script>
+	<script src="js/dom.js"></script>
+	<script src="js/wb-eye.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
