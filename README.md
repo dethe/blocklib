@@ -23,3 +23,7 @@ The custom elements themselves tend towards the experimental and silly. In addit
 * `channel.emitAsync(channelName, data)` sends an arbitrary data object to every element listening on channelName, but doesn't wait until they process it. Each listener's `onChannel` method will be called as above.
 
 
+### Notes on HTML Imports
+
+Apparently, brick does not include html imports from the x-tag core. This makes packaging HTML templates, CSS, and JavaScript together more difficult. I'm not sure what the answer is here. When I tried to get HTML imports working with brick / x-tag I ran into a ton of undocumented or obscurely documented issues. Eventually it seemed to come down to a timing conflict: if I used HTML includes, then xtag wasn't defined yet when the component loaded, and of course if we load HTML imports after, then they're not automatically picked up by custom element. 
+
